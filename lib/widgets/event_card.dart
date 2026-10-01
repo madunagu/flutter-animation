@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../models/event.dart';
-import '../app_colors.dart';
 
 // ────────────────────────────────────────────────────
 // A single full-width event card
@@ -36,7 +35,7 @@ class EventCard extends StatelessWidget {
                 event.backgroundSymbol,
                 style: TextStyle(
                   fontSize: small ? 54 : 72,
-                  color: Colors.white.withOpacity(0.12),
+                  color: Colors.white.withValues(alpha: 0.12),
                   fontWeight: FontWeight.w900,
                   fontFamily: 'monospace',
                 ),
@@ -54,7 +53,7 @@ class EventCard extends StatelessWidget {
                 '${event.dayLabel}  ${event.time}',
                 style: GoogleFonts.poppins(
                   fontSize: small ? 9 : 11,
-                  color: Colors.white.withOpacity(0.75),
+                  color: Colors.white.withValues(alpha: 0.75),
                   fontWeight: FontWeight.w400,
                   letterSpacing: 0.2,
                 ),
@@ -88,7 +87,7 @@ class EventCard extends StatelessWidget {
                       event.participantText,
                       style: GoogleFonts.poppins(
                         fontSize: small ? 9.5 : 11,
-                        color: Colors.white.withOpacity(0.85),
+                        color: Colors.white.withValues(alpha: 0.85),
                         fontWeight: FontWeight.w400,
                       ),
                       maxLines: 2,

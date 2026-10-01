@@ -143,7 +143,7 @@ class _EventDetailScreenState extends State<EventDetailScreen>
                 widget.event.backgroundSymbol,
                 style: TextStyle(
                   fontSize: 90,
-                  color: Colors.white.withOpacity(0.1),
+                  color: Colors.white.withValues(alpha: 0.1),
                   fontWeight: FontWeight.w900,
                   fontFamily: 'monospace',
                 ),
@@ -182,7 +182,7 @@ class _EventDetailScreenState extends State<EventDetailScreen>
                   height: 46,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: widget.event.cardColor.withOpacity(0.2),
+                    color: widget.event.cardColor.withValues(alpha: 0.2),
                   ),
                   child: Icon(Icons.group_outlined,
                       color: widget.event.cardColor, size: 24),
@@ -289,7 +289,7 @@ class _EventDetailScreenState extends State<EventDetailScreen>
             height: 38,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.white.withOpacity(0.12),
+              color: Colors.white.withValues(alpha: 0.12),
             ),
             child: const Icon(Icons.arrow_forward,
                 size: 18, color: Colors.white),
@@ -322,7 +322,7 @@ class _EventDetailScreenState extends State<EventDetailScreen>
               margin: const EdgeInsets.only(right: 8),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white.withOpacity(0.18)),
+                  color: Colors.white.withValues(alpha: 0.18)),
               child: const Icon(Icons.close, color: Colors.white, size: 20),
             ),
           ),
@@ -337,7 +337,7 @@ class _EventDetailScreenState extends State<EventDetailScreen>
               height: 42,
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white.withOpacity(0.18)),
+                  color: Colors.white.withValues(alpha: 0.18)),
               child: const Icon(Icons.check, color: Colors.white, size: 20),
             ),
           ),
@@ -487,7 +487,7 @@ class _MapGridPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.white.withOpacity(0.08)
+      ..color = Colors.white.withValues(alpha: 0.08)
       ..strokeWidth = 1;
 
     // Horizontal lines
@@ -501,7 +501,7 @@ class _MapGridPainter extends CustomPainter {
 
     // A couple of "road" lines
     final roadPaint = Paint()
-      ..color = Colors.white.withOpacity(0.15)
+      ..color = Colors.white.withValues(alpha: 0.15)
       ..strokeWidth = 3;
     canvas.drawLine(
         Offset(size.width * 0.2, 0),

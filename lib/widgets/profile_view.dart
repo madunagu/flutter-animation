@@ -73,7 +73,7 @@ class _ProfileViewState extends State<ProfileView>
                     'they asked me what I wanted to be I grew up.',
                     style: GoogleFonts.poppins(
                       fontSize: 13,
-                      color: Colors.white.withOpacity(0.75),
+                      color: Colors.white.withValues(alpha: 0.75),
                       height: 1.6,
                     ),
                   ),
@@ -95,7 +95,7 @@ class _ProfileViewState extends State<ProfileView>
                     'this account.',
                     style: GoogleFonts.poppins(
                       fontSize: 13,
-                      color: Colors.white.withOpacity(0.75),
+                      color: Colors.white.withValues(alpha: 0.75),
                       height: 1.6,
                     ),
                   ),
@@ -135,7 +135,7 @@ class _ProfileViewState extends State<ProfileView>
             child: Icon(
               Icons.person,
               size: 160,
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withValues(alpha: 0.2),
             ),
           ),
         ),

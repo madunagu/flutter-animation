@@ -137,7 +137,7 @@ class _YouAvatar extends StatelessWidget {
               child: Center(
                 child: Icon(
                   Icons.person,
-                  color: Colors.white.withOpacity(0.9),
+                  color: Colors.white.withValues(alpha: 0.9),
                   size: isSelected ? 28 : 24,
                 ),
               ),

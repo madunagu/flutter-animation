@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../app_colors.dart';
 import '../data/events_data.dart';
 import '../models/event.dart';
@@ -156,7 +155,7 @@ class _HomeScreenState extends State<HomeScreen>
               // ── Category overlay ───────────────────
               AnimatedBuilder(
                 animation: _overlayCtrl,
-                builder: (_, __) {
+                builder: (context, child) {
                   if (_overlayCtrl.value == 0) return const SizedBox.shrink();
                   return CategoryOverlay(
                     categories: appCategories,
@@ -277,8 +276,8 @@ class _HomeScreenState extends State<HomeScreen>
     Navigator.push(
       context,
       PageRouteBuilder(
-        pageBuilder: (_, anim, __) => EventDetailScreen(event: event),
-        transitionsBuilder: (_, anim, __, child) {
+        pageBuilder: (context, anim, secondaryAnim) => EventDetailScreen(event: event),
+        transitionsBuilder: (context, anim, secondaryAnim, child) {
           return SlideTransition(
             position: Tween<Offset>(
               begin: const Offset(0, 0.06),
@@ -317,7 +316,7 @@ class _Fab extends StatelessWidget {
           color: isOpen ? AppColors.darkPurple : Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(isOpen ? 0.25 : 0.15),
+              color: Colors.black.withValues(alpha: isOpen ? 0.25 : 0.15),
               blurRadius: isOpen ? 16 : 10,
               offset: const Offset(0, 4),
             ),
